@@ -1,19 +1,13 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 from sqlalchemy import create_engine
+from urllib import parse
+import os
 
 
 # Declare Global variables 
-# Local
-driver = "postgresql+psycopg2://username:password@host:port/db"
-
-# Heroku
-# from urllib import parse
-# import os
-# parse.uses_netloc.append("postgres")
-# url = parse.urlparse(os.environ["HEROKU_POSTGRESQL_OLIVE_URL"])
-# driver = "postgresql+psycopg2://{0}:{1}@{2}:{3}/{4}".format(url.username,url.password,url.hostname,url.port,url.path[1:])
-
+url = parse.urlparse(os.environ.get('DATABASE_URL'))
+driver = "postgresql+psycopg2://{0}:{1}@{2}:{3}/{4}".format(url.username,url.password,url.hostname,url.port,url.path[1:])
 
 
 # Create database engine

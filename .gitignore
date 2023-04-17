@@ -8,3 +8,4 @@ lib/
 pip-selfcheck.json
 backups/
 heroku_dist/
+__pycache__/
