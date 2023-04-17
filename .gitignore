@@ -9,3 +9,4 @@ pip-selfcheck.json
 backups/
 heroku_dist/
 __pycache__/
+.vercel/
