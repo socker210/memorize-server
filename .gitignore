@@ -1,0 +1,10 @@
+# PIP Packages
+env/
+bin/
+include/
+lib/
+
+# Extra files & folder
+pip-selfcheck.json
+backups/
+heroku_dist/
